@@ -18,8 +18,8 @@ pip install einops
 - [Visual Genome (VG)](https://visualgenome.org/api/v0/api_home.html)
   - Download images of part1 and part2 and combine them together 
 - Conceptual Captions (CC3M)
-  - Download `Train_GCC-training.tsv` from [kaggle](https://www.kaggle.com/ad271828/conceptual-captions-dataset-train-and-validation)
-  - Then use [img2dataset](https://github.com/rom1504/img2dataset) to download images from `Train_GCC-training.tsv`
+  - Download `Train_GCC-training.tsv` and `Validation_GCC-1.1.0-Validation.tsv` from [kaggle](https://www.kaggle.com/ad271828/conceptual-captions-dataset-train-and-validation)
+  - Then use [img2dataset](https://github.com/rom1504/img2dataset) to download images from downloaed tsv files
   - [More details](https://github.com/rom1504/img2dataset/blob/main/dataset_examples/cc3m.md)
 - SBU Captions
   - Download url from [subcaptions](http://www.cs.virginia.edu/~vicente/sbucaptions/)

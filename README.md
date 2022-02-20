@@ -115,6 +115,7 @@ python -m torch.distributed.launch --nproc_per_node=8 \
 --output_dir output/TCL_e30_NLVR \
 --checkpoint output/TCL_e30_NLVR_pretrain/checkpoint_00.pth
 ```
+- how to evaluate and interpret the results(https://github.com/salesforce/ALBEF/issues/19)
 
 ### Citation:
 ```

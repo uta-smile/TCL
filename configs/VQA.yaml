@@ -1,0 +1,32 @@
+train_file: ['../data/json_down/vqa_train.json',
+             '../data/json_down/vqa_val.json',   
+             '../data/json_down/vg.json']
+             
+test_file: ['../data/json_down/vqa_test.json']
+answer_list: '../data/json_down/answer_list.json'
+
+vqa_root: '../data/VQA/Images/mscoco/' #train2014/
+vg_root: '../data/VG/VG_100K/'  #image/
+
+image_res: 384
+batch_size_train: 32 
+batch_size_test: 16 
+k_test: 128
+
+alpha: 0.4
+distill: True
+warm_up: True
+
+eos: '[SEP]'
+
+bert_config: 'configs/config_bert.json'
+
+optimizer: {opt: adamW, lr: 2e-5, weight_decay: 0.02}
+schedular: {sched: cosine, lr: 2e-5, epochs: 8, min_lr: 1e-6, decay_rate: 1, warmup_lr: 1e-5, warmup_epochs: 4, cooldown_epochs: 0}
+
+
+
+
+
+
+

@@ -26,6 +26,9 @@ pip install einops
 - SBU Captions
   - Download url from [subcaptions](http://www.cs.virginia.edu/~vicente/sbucaptions/)
   - Then use [img2dataset](https://github.com/rom1504/img2dataset) to download images from url
+- CC12M
+  - Download [cc12m.tsv](https://github.com/google-research-datasets/conceptual-12m#download)
+  - Then use [img2dataset](https://github.com/rom1504/img2dataset) to download images from the downloaed tsv file
 
 ### Downstream-task Datasets:
 - [Flicker30k](https://www.kaggle.com/hsankesara/flickr-image-dataset)
@@ -45,7 +48,7 @@ pip install einops
 python -m torch.distributed.launch --nproc_per_node=8 \
 --use_env Pretrain.py \
 --config ./configs/Pretrain.yaml \
---output_dir output/TCL
+--output_dir output/pretrain
 ```
 ### Downstream Tasks:
 #### Image-Text Retrieval
@@ -54,30 +57,30 @@ python -m torch.distributed.launch --nproc_per_node=8 \
 python -m torch.distributed.launch --nproc_per_node=8 \
 --use_env Retrieval.py \
 --config ./configs/Retrieval_coco.yaml \
---output_dir output/TCL_e30_Retrieval_coco_zeroshot \
---checkpoint output/TCL/checkpoint_29.pth \
+--output_dir output/pretrain_e30_Retrieval_coco_zeroshot \
+--checkpoint output/pretrain/checkpoint_29.pth \
 --evaluate
 
 # fine-tune flickr
 python -m torch.distributed.launch --nproc_per_node=8 \
 --use_env Retrieval.py \
 --config ./configs/Retrieval_flickr.yaml \
---output_dir output/TCL_e30_Retrieval_flickr \
---checkpoint output/TCL/checkpoint_29.pth
+--output_dir output/pretrain_e30_Retrieval_flickr \
+--checkpoint output/pretrain/checkpoint_29.pth
 
 # fine-tune coco
 python -m torch.distributed.launch --nproc_per_node=8 \
 --use_env Retrieval.py \
 --config ./configs/Retrieval_coco.yaml \
---output_dir output/TCL_e30_Retrieval_coco \
---checkpoint output/TCL/checkpoint_29.pth
+--output_dir output/pretrain_e30_Retrieval_coco \
+--checkpoint output/pretrain/checkpoint_29.pth
 
 # zero-shot flickr 
 python -m torch.distributed.launch --nproc_per_node=8 \
 --use_env Retrieval.py \
 --config ./configs/Retrieval_flickr.yaml \
---output_dir output/TCL_e30_Retrieval_flickr_zeroshot \
---checkpoint output/TCL_e30_Retrieval_coco/checkpoint_best.pth \
+--output_dir output/pretrain_e30_Retrieval_flickr_zeroshot \
+--checkpoint output/pretrain_e30_Retrieval_coco/checkpoint_best.pth \
 --evaluate
 ```
 
@@ -86,8 +89,8 @@ python -m torch.distributed.launch --nproc_per_node=8 \
 python -m torch.distributed.launch --nproc_per_node=8 \
 --use_env VQA.py \
 --config ./configs/VQA.yaml \
---output_dir output/TCL_e30_vqa \
---checkpoint output/TCL/checkpoint_29.pth
+--output_dir output/pretrain_e30_vqa \
+--checkpoint output/pretrain/checkpoint_29.pth
 ```
 - how to evaluate and interpret the results(https://github.com/salesforce/ALBEF/issues/19)
 
@@ -96,8 +99,8 @@ python -m torch.distributed.launch --nproc_per_node=8 \
 python -m torch.distributed.launch --nproc_per_node=8 \
 --use_env VE.py \
 --config ./configs/VE.yaml \
---output_dir output/TCL_e30_VE \
---checkpoint output/TCL/checkpoint_29.pth
+--output_dir output/pretrain_e30_VE \
+--checkpoint output/pretrain/checkpoint_29.pth
 ```
 - how to evaluate and interpret the results(https://github.com/salesforce/ALBEF/issues/19)
 
@@ -107,15 +110,15 @@ python -m torch.distributed.launch --nproc_per_node=8 \
 python -m torch.distributed.launch --nproc_per_node=8 \
 --use_env Pretrain_nlvr.py \
 --config ./configs/NLVR_pretrain.yaml \
---output_dir output/TCL_e30_NLVR_pretrain \
---checkpoint output/TCL/checkpoint_29.pth
+--output_dir output/pretrain_e30_NLVR_pretrain \
+--checkpoint output/pretrain/checkpoint_29.pth
 
 # fine-tune nlvr
 python -m torch.distributed.launch --nproc_per_node=8 \
 --use_env NLVR.py \
 --config ./configs/NLVR.yaml \
---output_dir output/TCL_e30_NLVR \
---checkpoint output/TCL_e30_NLVR_pretrain/checkpoint_00.pth
+--output_dir output/pretrain_e30_NLVR \
+--checkpoint output/pretrain_e30_NLVR_pretrain/checkpoint_00.pth
 ```
 - how to evaluate and interpret the results(https://github.com/salesforce/ALBEF/issues/19)
 

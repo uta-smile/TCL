@@ -1,5 +1,7 @@
 # Vision-Language Pre-Training with Triple Contrastive Learning
 
+This is the official PyTorch implementation of [TCL](https://arxiv.org/abs/2202.10401)
+
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/20442927/154851838-5297cc88-47d2-43f4-9602-ef29c63c479b.png">
 
 ### Requirements:

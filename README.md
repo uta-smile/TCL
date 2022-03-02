@@ -1,4 +1,4 @@
-# Vision-Language Pre-Training with Triple Contrastive Learning
+# Vision-Language Pre-Training with Triple Contrastive Learning, CVPR 2022
 
 This is the official PyTorch implementation of [TCL](https://arxiv.org/abs/2202.10401)
 

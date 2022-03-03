@@ -127,7 +127,7 @@ python -m torch.distributed.launch --nproc_per_node=8 \
 @article{yang2022vision,
   title={Vision-Language Pre-Training with Triple Contrastive Learning},
   author={Yang, Jinyu and Duan, Jiali and Tran, Son and Xu, Yi and Chanda, Sampath and Chen, Liqun and Zeng, Belinda and Chilimbi, Trishul and Huang, Junzhou},
-  journal={arXiv preprint arXiv:2202.10401},
+  journal={Proceedings of the IEEE conference on computer vision and pattern recognition},
   year={2022}
 }
 ```

@@ -41,7 +41,7 @@ pip install einops
 - you need to change the image path in json files according to your downloaded images
 
 ### Pre-trained checkpoint:
-- [TCL_4M](https://drive.google.com/file/d/1rv77uqt1-YcYFPqavaFwccEgsO24gGsX/view?usp=sharing)
+- [TCL_4M](https://drive.google.com/file/d/1Cb1azBdcdbm0pRMFs-tupKxILTCXlB4O/view?usp=sharing)
 
 ### Pre-training:
 ```

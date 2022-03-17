@@ -1,5 +1,9 @@
 # Vision-Language Pre-Training with Triple Contrastive Learning, CVPR 2022
 
+### News
+(03/16/2022) upload retrieval [checkpoints](https://github.com/uta-smile/TCL#pre-trained-checkpoint) finetuned on COCO and Flickr
+<hr />
+
 This is the official PyTorch implementation of [TCL](https://arxiv.org/abs/2202.10401)
 
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/20442927/154851838-5297cc88-47d2-43f4-9602-ef29c63c479b.png">
@@ -31,7 +35,7 @@ pip install einops
   - Then use [img2dataset](https://github.com/rom1504/img2dataset) to download images from the downloaed tsv file
 
 ### Downstream-task Datasets:
-- [Flicker30k](https://www.kaggle.com/hsankesara/flickr-image-dataset)
+- [Flickr30k](https://www.kaggle.com/hsankesara/flickr-image-dataset)
 - [VQA v2](https://visualqa.org/download.html)
 - NLVR2
   - recommend to use [direct-image-download](https://github.com/lil-lab/nlvr/tree/master/nlvr2#direct-image-download)
@@ -42,6 +46,8 @@ pip install einops
 
 ### Pre-trained checkpoint:
 - [TCL_4M](https://drive.google.com/file/d/1Cb1azBdcdbm0pRMFs-tupKxILTCXlB4O/view?usp=sharing)
+- [TCL_Retrieval_Coco_Finetune](https://drive.google.com/file/d/1PtcZF_XzJgIceg4rXLWqGQiXjizvxxS6/view?usp=sharing)
+- [TCL_Retrieval_Flickr_Finetune](https://drive.google.com/file/d/1qwWfqyCu1F5YZqQNxjkqy1REESoU6pOT/view?usp=sharing)
 
 ### Pre-training:
 ```

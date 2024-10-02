@@ -44,10 +44,10 @@ pip install einops
 - refer to [Download](https://github.com/salesforce/ALBEF#download) in [ALBEF](https://github.com/salesforce/ALBEF)
 - you need to change the image path in json files according to your downloaded images
 
-### Pre-trained checkpoint:
-- [TCL_4M](https://drive.google.com/file/d/1Cb1azBdcdbm0pRMFs-tupKxILTCXlB4O/view?usp=sharing)
-- [TCL_Retrieval_Coco_Finetune](https://drive.google.com/file/d/1PtcZF_XzJgIceg4rXLWqGQiXjizvxxS6/view?usp=sharing)
-- [TCL_Retrieval_Flickr_Finetune](https://drive.google.com/file/d/1qwWfqyCu1F5YZqQNxjkqy1REESoU6pOT/view?usp=sharing)
+### Pre-trained Checkpoints ([Download Link](https://drive.google.com/file/d/1eHinvFP7TnZYAL2Ft-M8rPott7mpVN2R/view?usp=sharing)):
+- TCL_4M
+- TCL_Retrieval_Coco_Finetune
+- TCL_Retrieval_Flickr_Finetune
 
 ### Pre-training:
 ```
